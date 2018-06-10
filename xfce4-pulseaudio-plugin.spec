@@ -1,11 +1,11 @@
 Summary:	Xfce panel plugin for pulseaudio mixer control
 Name:		xfce4-pulseaudio-plugin
-Version:	0.2.2
+Version:	0.4.1
 Release:	1
 License:	GPL v2
 Group:		X11/Applications
-Source0:	http://archive.xfce.org/src/panel-plugins/xfce4-pulseaudio-plugin/0.2/%{name}-%{version}.tar.bz2
-# Source0-md5:	87eba78c16d16e047ce34537043ee993
+Source0:	http://archive.xfce.org/src/panel-plugins/xfce4-pulseaudio-plugin/0.4/%{name}-%{version}.tar.bz2
+# Source0-md5:	7df7280c19c2c8b8c5bc4f4f2136d1dd
 URL:		http://git.xfce.org/panel-plugins/xfce4-pulseaudio-plugin/
 BuildRequires:	glib2-devel >= 1:2.30.2
 BuildRequires:	gtk+3-devel
@@ -44,7 +44,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-#%find_lang %{name}
+%find_lang %{name}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -55,11 +55,11 @@ rm -rf $RPM_BUILD_ROOT
 %postun
 %update_icon_cache hicolor
 
-#%files -f %{name}.lang
-%files
+%files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog README
 %attr(755,root,root) %{_libdir}/xfce4/panel/plugins/libpulseaudio-plugin.so
 %{_datadir}/xfce4/panel/plugins/pulseaudio.desktop
 %{_iconsdir}/hicolor/*/apps/xfce4-pulseaudio-plugin*
 %{_iconsdir}/hicolor/*/status/audio-volume-*
+%{_iconsdir}/hicolor/*/status/microphone-sensitivity-*-symbolic.svg
