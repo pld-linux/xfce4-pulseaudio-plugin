@@ -1,15 +1,16 @@
 Summary:	Xfce panel plugin for pulseaudio mixer control
 Name:		xfce4-pulseaudio-plugin
-Version:	0.4.2
+Version:	0.4.3
 Release:	1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://archive.xfce.org/src/panel-plugins/xfce4-pulseaudio-plugin/0.4/%{name}-%{version}.tar.bz2
-# Source0-md5:	9a34eadf06ed217ec0732a096f178987
+# Source0-md5:	3d86032acb9364d47e0a144350c63e1a
 URL:		http://git.xfce.org/panel-plugins/xfce4-pulseaudio-plugin/
 BuildRequires:	glib2-devel >= 1:2.30.2
 BuildRequires:	gtk+3-devel
-BuildRequires:	exo-devel >= 0.6.0
+BuildRequires:	exo-devel >= 0.11.0
+BuildRequires:	keybinder3-devel >= 0.2.2
 BuildRequires:	libxfce4ui-devel >= 4.14.0
 BuildRequires:	libxfce4util-devel >= 4.14.0
 BuildRequires:	pulseaudio-devel
@@ -44,6 +45,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+%{__rm}  $RPM_BUILD_ROOT%{_libdir}/xfce4/panel/plugins/libpulseaudio-plugin.la
 %{__rm} -r $RPM_BUILD_ROOT%{_localedir}/ie
 %{__mv} $RPM_BUILD_ROOT%{_localedir}/{hy_AM,hy}
 
