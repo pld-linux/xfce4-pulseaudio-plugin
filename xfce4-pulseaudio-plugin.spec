@@ -1,11 +1,11 @@
 Summary:	Xfce panel plugin for pulseaudio mixer control
 Name:		xfce4-pulseaudio-plugin
-Version:	0.4.3
-Release:	2
+Version:	0.4.4
+Release:	1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://archive.xfce.org/src/panel-plugins/xfce4-pulseaudio-plugin/0.4/%{name}-%{version}.tar.bz2
-# Source0-md5:	3d86032acb9364d47e0a144350c63e1a
+# Source0-md5:	f0efc757a03ecaf0306a889b33b0fcfe
 URL:		http://git.xfce.org/panel-plugins/xfce4-pulseaudio-plugin/
 BuildRequires:	glib2-devel >= 1:2.30.2
 BuildRequires:	gtk+3-devel
@@ -47,7 +47,7 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT
 
 %{__rm}  $RPM_BUILD_ROOT%{_libdir}/xfce4/panel/plugins/libpulseaudio-plugin.la
-%{__rm} -r $RPM_BUILD_ROOT%{_localedir}/ie
+%{__rm} -r $RPM_BUILD_ROOT%{_localedir}/{hye,ie}
 %{__mv} $RPM_BUILD_ROOT%{_localedir}/{hy_AM,hy}
 
 %find_lang %{name}
@@ -63,7 +63,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog README
+%doc AUTHORS ChangeLog README.md
 %attr(755,root,root) %{_libdir}/xfce4/panel/plugins/libpulseaudio-plugin.so
 %{_datadir}/xfce4/panel/plugins/pulseaudio.desktop
 %{_iconsdir}/hicolor/*/apps/xfce4-pulseaudio-plugin*
