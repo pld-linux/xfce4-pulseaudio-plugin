@@ -1,16 +1,17 @@
 Summary:	Xfce panel plugin for pulseaudio mixer control
 Name:		xfce4-pulseaudio-plugin
-Version:	0.4.5
+Version:	0.4.6
 Release:	1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://archive.xfce.org/src/panel-plugins/xfce4-pulseaudio-plugin/0.4/%{name}-%{version}.tar.bz2
-# Source0-md5:	c6fe6cef01aa1786d388c51a6ed2ec5c
+# Source0-md5:	84e97fa1c525bfaee67798c738e9c624
 URL:		http://git.xfce.org/panel-plugins/xfce4-pulseaudio-plugin/
-BuildRequires:	glib2-devel >= 1:2.30.2
-BuildRequires:	gtk+3-devel
 BuildRequires:	exo-devel >= 0.11.0
+BuildRequires:	glib2-devel >= 1:2.44.0
+BuildRequires:	gtk+3-devel
 BuildRequires:	keybinder3-devel >= 0.2.2
+BuildRequires:	libwnck-devel >= 3.20
 BuildRequires:	libxfce4ui-devel >= 4.14.0
 BuildRequires:	libxfce4util-devel >= 4.14.0
 BuildRequires:	pulseaudio-devel
@@ -26,10 +27,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 The Xfce PulseAudio Plugin is a plugin for the Xfce panel which
-provides a convenient way to adjust the audio volume of the
-PulseAudio sound system and to an auto mixer tool like pavucontrol.
-It can optionally handle multimedia keys for controlling the audio
-volume.
+provides a convenient way to adjust the audio volume of the PulseAudio
+sound system and to an auto mixer tool like pavucontrol. It can
+optionally handle multimedia keys for controlling the audio volume.
 
 %prep
 %setup -q
