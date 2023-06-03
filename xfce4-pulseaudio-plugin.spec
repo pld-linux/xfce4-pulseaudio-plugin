@@ -1,11 +1,11 @@
 Summary:	Xfce panel plugin for pulseaudio mixer control
 Name:		xfce4-pulseaudio-plugin
-Version:	0.4.6
+Version:	0.4.7
 Release:	1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://archive.xfce.org/src/panel-plugins/xfce4-pulseaudio-plugin/0.4/%{name}-%{version}.tar.bz2
-# Source0-md5:	84e97fa1c525bfaee67798c738e9c624
+# Source0-md5:	7d1041a7538daf8171dbbc71f5bbefe9
 URL:		http://git.xfce.org/panel-plugins/xfce4-pulseaudio-plugin/
 BuildRequires:	exo-devel >= 0.11.0
 BuildRequires:	glib2-devel >= 1:2.44.0
