@@ -1,27 +1,28 @@
 Summary:	Xfce panel plugin for pulseaudio mixer control
 Name:		xfce4-pulseaudio-plugin
-Version:	0.4.8
+Version:	0.4.9
 Release:	1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://archive.xfce.org/src/panel-plugins/xfce4-pulseaudio-plugin/0.4/%{name}-%{version}.tar.bz2
-# Source0-md5:	83317e672e843e0b14d0da24ed301b3b
+# Source0-md5:	c4424a441794c92c7f45d275864f00d3
 URL:		http://git.xfce.org/panel-plugins/xfce4-pulseaudio-plugin/
 BuildRequires:	exo-devel >= 0.11.0
-BuildRequires:	glib2-devel >= 1:2.44.0
-BuildRequires:	gtk+3-devel
+BuildRequires:	glib2-devel >= 1:2.72.0
+BuildRequires:	gtk+3-devel >= 3.24.0
 BuildRequires:	keybinder3-devel >= 0.2.2
 BuildRequires:	libwnck-devel >= 3.20
-BuildRequires:	libxfce4ui-devel >= 4.14.0
-BuildRequires:	libxfce4util-devel >= 4.14.0
+BuildRequires:	libxfce4ui-devel >= 4.20.0
+BuildRequires:	libxfce4util-devel >= 4.20.0
+BuildRequires:	libxfce4windowing-devel >= 4.20.0
 BuildRequires:	pulseaudio-devel
 BuildRequires:	rpmbuild(macros) >= 1.601
-BuildRequires:	xfce4-dev-tools >= 4.14.0
-BuildRequires:	xfce4-panel-devel >= 4.14.0
-BuildRequires:	xfconf-devel >= 4.14.0
+BuildRequires:	xfce4-dev-tools >= 4.20.0
+BuildRequires:	xfce4-panel-devel >= 4.20.0
+BuildRequires:	xfconf-devel >= 4.20.0
 Requires:	gtk-update-icon-cache
 Requires:	hicolor-icon-theme
-Requires:	xfce4-panel >= 4.14.0
+Requires:	xfce4-panel >= 4.20.0
 Obsoletes:	xfce4-mixer < 4.12
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
